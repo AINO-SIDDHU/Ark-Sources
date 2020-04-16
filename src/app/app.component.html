@@ -1,0 +1,29 @@
+
+<nav mat-tab-nav-bar>
+  
+	<a mat-tab-link routerLink="/publication" routerLinkActive #pubTab="routerLinkActive" [active]="pubTab.isActive">
+		Publication
+	</a>
+	<a mat-tab-link routerLink="/sources" routerLinkActive #sourceTab="routerLinkActive" [active]="sourceTab.isActive">Source</a>
+
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- <div style="padding: 5px;">
+    
+    <nav md-tab-nav-bar >
+        <a md-tab-link
+           *ngFor="let routeLink of routeLinks; let i = index;"
+           [routerLink]="routeLink.link"
+           routerLinkActive="mat-tab-link-active"
+           #rla="routerLinkActive"
+           [active]="activeLinkIndex === i"
+           (click)="activeLinkIndex = i"
+           [routerLinkActiveOptions]="{exact: true}"
+        >
+            {{routeLink.label}}
+        </a>
+    </nav>
+<router-outlet></router-outlet>
+</div> -->
