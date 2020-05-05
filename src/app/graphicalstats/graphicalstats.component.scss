@@ -1,0 +1,74 @@
+.first {
+    width: 350px;
+    height: 370px;
+}
+
+.second {
+    width: 350px;
+    height: 370px;
+    margin-left: 450px;
+    margin-top: -370px;
+}
+
+.third {
+    width: 350px;
+    height: 370px;
+    margin-left: 900px;
+    margin-top: -370px;
+}
+
+.fourth {
+    width: 350px;
+    height: 370px;
+    margin-left: 1350px;
+    margin-top: -370px;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.src {
+    margin-left: 30px;
+    flex: 20;
+}
+
+#icon {
+    color: red;
+}
+
+#local {
+    color: palegreen
+}
+
+.art {
+    flex: 170;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.content {
+    margin-left: 380px;
+    margin-top: -58px;
+}
+
+.sub-title {
+    margin-left: 760px;
+    margin-top: -44px;
+}
+
+.time {
+    margin-left: 1255px;
+    margin-top: -44px;
+}
+
+mat-toolbar {
+    margin-top: -7px;
+}
+
+mat-icon {
+    margin-right: 15px;
+}

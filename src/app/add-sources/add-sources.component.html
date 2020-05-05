@@ -1,0 +1,33 @@
+<div class="example-container">
+    <form [formGroup]="this.sourceService.form" (ngSubmit)="onSubmit()">
+        <input type="hidden" formControlName="$key">
+        <div class="form-group">
+            <mat-form-field appearance="fill" class="input">
+                <mat-label> Sources Name</mat-label>
+                <input formControlName="Sname" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.Sname.errors}" matInput>
+            </mat-form-field>
+            <div class="invalid-feedback" *ngIf="submitted && formControls.Sname.errors">Please enter source name</div>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <mat-form-field class="input">
+                <mat-label> Publications of sources</mat-label>
+                <mat-select formControlName="Psource" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.Psource.errors}">
+                    <mat-option value="Single">Single</mat-option>
+                    <mat-option value="Multiple">Multiple</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="invalid-feedback" *ngIf="submitted && formControls.Psource.errors">This is required</div>
+        </div>
+
+        <mat-button-field>
+            <br>
+
+            <button mat-raised-button (click)="onCancel()">Cancel</button>
+            <button mat-raised-button type="submit">Save</button>
+            <br>
+        </mat-button-field>
+    </form>
+</div>

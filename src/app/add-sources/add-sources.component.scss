@@ -1,0 +1,17 @@
+button {
+    margin-left: 68px;
+    color: seashell;
+    background-color: cadetblue;
+}
+
+.example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.input {
+    width: 150%;
+}

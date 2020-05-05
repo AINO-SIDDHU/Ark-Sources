@@ -1,0 +1,83 @@
+<!-- <button class="topbutton" type="button" mdbBtn mdbWavesEffect>Script in Use</button> -->
+
+
+<div class="full-width" fxLayoutAlign="center center">
+    <form [formGroup]="formDraft" #formCtrl="ngForm">
+        <!-- <form #formDraft="ng-form" (ngSubmit)="submit(formDraft)"> -->
+        <div class="form-group">
+            <mat-form-field class="urlinput">
+                <mat-label>Enter Name/URL</mat-label>
+                <input required id="url" type="text" matInput formControlName="scriptname" required>
+                <!-- when we add required then #formCtrl validate  -->
+            </mat-form-field>
+        </div>
+
+        <mat-form-field mat-dialog-actions appearance="outline" class="selectoption">
+            <mat-label style="font-size:2;">Select an option</mat-label>
+            <mat-select disableRipple formControlName="select">
+                <mat-option value="1">Option 1</mat-option>
+                <mat-option value="2">Option 2</mat-option>
+                <mat-option value="3">Option 3</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field MatFormFieldControl class="textarea" appearance="outline">
+            <textarea type="text" id="textareaid" formControlName="textarea"
+                placeholder="copy & paste the scrawling script" class="md-textarea md-textarea-auto form-control"
+                rows="30" matInput required></textarea>
+        </mat-form-field><br>
+
+        <button class="button1" id="configure" mat-button (click)='popup()'>Configure Association</button>
+
+        <button class="button2" id="savescript" mat-button [disabled]="btnDisabled" (click)='saveScript()'>Save
+            Script</button>&nbsp; &nbsp;&nbsp;&nbsp;
+
+        <button class="button3" id="testscript" mat-button [disabled]="!formCtrl.form.valid" (click)='testScript()'>Test
+            Script</button>
+
+    </form>
+</div>
+
+
+
+<!-- (click)='testScript()' -->
+
+<!-- <mat-form-field>
+            <mat-label>Draft></mat-label>
+            <input matInput  class="input" formControlName="draft">
+</mat-form-field> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <a href="http://www.google.com" class="toplink">In Draft</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://www.google.com" class="toplink1">In Use</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="http://www.google.com" class="toplink2">New</a> -->
+
+<!-- <div class="format">
+      <a href="http://www.google.com">Format</a>
+    </div>   -->
+
+<!-- <button class="mdc-button--raised">
+            <span class="mdc-button__label">Configure Association</span>
+        </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+<!-- <button class="mdc-button--raised1">
+            <span class="mdc-button__label" (click)="saveScript()">Save Script</span>
+        </button>
+
+        <button class="mdc-button--raised1" style="background-color: green;">
+            <span class="mdc-button__label">Test Script</span>
+      </button> -->

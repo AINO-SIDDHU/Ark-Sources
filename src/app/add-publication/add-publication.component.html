@@ -1,0 +1,214 @@
+<!-- <ao-enterprise-grid ao-actions [actionDispatcher]=addActionSourcesActionDispatcher></ao-enterprise-grid> -->
+<div class="example">
+  <form [formGroup]="this.publicationService.form" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id">
+    <div class="form-group">
+      <section class="channel">
+        <mat-form-field class="input">
+          <mat-label> Select Channel</mat-label>
+          <mat-select formControlName="channel" class="form-control">
+
+
+            <mat-option value="Single">Single</mat-option>
+            <mat-option value="Multiple">Multiple</mat-option>
+
+          </mat-select>
+          <mat-error *ngIf="this.publicationService.hasError('channel', 'required')">Channel is required</mat-error>
+        </mat-form-field>
+      </section>
+    </div>
+
+
+
+
+
+    <div class="example-container">
+      <div class="example-container1">
+
+        <h1><u> Publication Information </u></h1>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> Publication Name</mat-label>
+            <input matInput formControlName="publicationName" class="form-control">
+            <mat-error *ngIf="this.publicationService.hasError('publicationName', 'required')">Publication Name is
+              required</mat-error>
+          </mat-form-field>
+
+          <br>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Publication Type</mat-label>
+            <mat-select formControlName="publicationType" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('publicationType', 'required')">This is required
+            </mat-error>
+          </mat-form-field>
+
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Content Type</mat-label>
+            <mat-select formControlName="contentType" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('contentType', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> Subscription Date</mat-label>
+            <input matInput formControlName="subscriptionDate" class="form-control" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="this.publicationService.hasError('subscriptionDate', 'required')">This is required
+            </mat-error>
+          </mat-form-field>
+
+          <br>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> Expiry Date</mat-label>
+            <input matInput formControlName="expiryDate" class="form-control" [matDatepicker]="datePicker1">
+            <mat-datepicker-toggle matSuffix [for]="datePicker1"></mat-datepicker-toggle>
+            <mat-datepicker #datePicker1></mat-datepicker>
+            <mat-error *ngIf="this.publicationService.hasError('expiryDate', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+          <br>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Main Language</mat-label>
+            <mat-select formControlName="language" class="form-control">
+              <mat-option>French</mat-option>
+              <mat-option value="Single">English</mat-option>
+              <mat-option value="Multiple">Italian</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('language', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Category</mat-label>
+            <mat-select formControlName="category" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('category', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+
+
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Country</mat-label>
+            <mat-select formControlName="country" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('country', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> Region</mat-label>
+            <mat-select formControlName="region" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('region', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="example-container2">
+
+        <h1> <u> Download Content Configuration</u></h1>
+
+        <mat-form-field appearance="fill" class="input">
+          <mat-checkbox [formControl]="this.publicationService.myFlagForBenchmark">Enable Benchmark ?</mat-checkbox>
+          <div class="form-group">
+            <input matInput formControlName="benchMark">
+          </div>
+        </mat-form-field>
+
+
+        <br>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> Parrent Path</mat-label>
+            <input matInput formControlName="parrentPath" class="form-control">
+            <mat-error *ngIf="this.publicationService.hasError('parrentPath', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+
+          <br>
+        </div>
+        <div class="form-group">
+          <mat-form-field class="input">
+            <mat-label> File strategy</mat-label>
+            <mat-select formControlName="fileStrategy" class="form-control">
+
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Multiple">Multiple</mat-option>
+            </mat-select>
+            <mat-error *ngIf="this.publicationService.hasError('fileStrategy', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+        </div>
+
+        <mat-form-field appearance="fill" class="input">
+          <mat-label> </mat-label>
+          <input matInput>
+        </mat-form-field>
+        <br>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> RegEx for page number</mat-label>
+            <input matInput formControlName="regexForPage" class="form-control">
+            <mat-error *ngIf="this.publicationService.hasError('regexForPage', 'required')">This is required</mat-error>
+          </mat-form-field>
+
+          <br>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill" class="input">
+            <mat-label> RegEx for edition</mat-label>
+            <input matInput formControlName="regexForEdition" class="form-control">
+            <mat-error *ngIf="this.publicationService.hasError('regexForEdition', 'required')">This is required
+            </mat-error>
+          </mat-form-field>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="example-container3">
+      <mat-button-field>
+        <button mat-raised-button (click)="onCancel()">Cancel</button>
+        <!-- <button mat-raised-button (click)="onBack()">Back</button> -->
+        <button mat-raised-button type="submit">Save and Continue</button>
+      </mat-button-field>
+    </div>
+
+
+  </form>
+</div>

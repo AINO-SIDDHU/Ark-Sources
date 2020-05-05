@@ -1,0 +1,26 @@
+<h2>Content Over Time</h2>
+<div class="content">
+    <mat-form-field>
+        <mat-label>
+            <h4>Select Publications</h4>
+        </mat-label>
+        <mat-select>
+            <mat-option *ngFor="let publication of publicationData" [value]="publication.value">
+                {{publication.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<h2 class="sub-title">Today Stats</h2>
+
+<h2 class="time">Time :<small> {{today | date:'fullDate'}} {{today | date:'h:mm:ss a'}}</small></h2>
+
+<br><br>
+
+
+<div id="chartContainer1" class="first"></div>
+<div id="chartContainer2" class="second"></div>
+<div id="chartContainer3" class="third"></div>
+<div id="chartContainer4" class="fourth"></div>
+
+<app-numericalstats></app-numericalstats>

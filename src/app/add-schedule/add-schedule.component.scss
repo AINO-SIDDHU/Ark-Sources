@@ -1,0 +1,36 @@
+
+button {
+    align-items: center;
+   margin-right: 5vh;
+   color:seashell;
+background-color: cadetblue;
+   
+}
+.example-container{
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   margin-top: 5%;
+   
+}
+.input{
+    min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+.example-margin{
+     margin-right: 10px;
+}
+.ngx-timepicker-field-example{
+     margin-right: 40px;
+}
+.weekDays{
+    display: flex; 
+}
+ .example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}

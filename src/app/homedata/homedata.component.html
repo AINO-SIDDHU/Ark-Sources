@@ -1,0 +1,10 @@
+<div class='inplacecontainer'>
+    Source Name :
+    <p id='source'>{{sourceService.Sname}}</p>
+    Publication of source :
+    <p id='publication'>{{sourceService.Psource}}</p>
+    <mat-button-field>
+        <button mat-raised-button (click)="Edit(sourceService.form.value)">Edit</button>
+    </mat-button-field>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,44 @@
+<div>
+    <div class="example-container">
+        <div class="display-data">
+
+            <mat-label> <b> Channel:</b>{{this.publicationService.channel}}</mat-label>
+
+            <mat-label><b> Publication :</b>{{this.publicationService.publicationName}}</mat-label>
+
+            <mat-label><b> Publication Type:</b>{{this.publicationService.publicationType}}</mat-label>
+
+            <mat-label><b> Content Type:</b>{{this.publicationService.contentType}}</mat-label>
+
+            <mat-label><b> Subscription Date:</b>{{subDate }}</mat-label>
+
+            <mat-label><b> Expiry Date:</b>{{expDate }}</mat-label>
+
+            <mat-label><b> Main Language:</b>{{this.publicationService.language}}</mat-label>
+
+            <mat-label><b> Category:</b>{{this.publicationService.category}}</mat-label>
+
+            <mat-label><b> Country:</b>{{this.publicationService.country}}</mat-label>
+
+            <mat-label><b> Region:</b>{{this.publicationService.region}}</mat-label>
+
+            <mat-label><b> Benchmark:</b>{{this.publicationService.benchMark}}</mat-label>
+
+            <mat-label><b> Parrent Path:</b>{{this.publicationService.parrentPath}}</mat-label>
+
+            <mat-label><b> File strategy:</b>{{this.publicationService.fileStrategy}}</mat-label>
+
+            <mat-label><b> RegEx for page number:</b>{{this.publicationService.regexForPage}}</mat-label>
+
+            <mat-label><b> RegEx for edition:</b>{{this.publicationService.regexForEdition}}</mat-label>
+            <br>
+        </div>
+        <mat-button-field>
+
+
+            <button mat-raised-button (click)="onClickEdit(this.publicationService.form.value)">Edit</button>
+
+            <br>
+        </mat-button-field>
+    </div>
+</div>

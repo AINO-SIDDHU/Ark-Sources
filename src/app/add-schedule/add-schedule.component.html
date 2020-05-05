@@ -1,0 +1,38 @@
+<div class="example-container">
+
+    <span>Add Schedule</span>
+
+
+
+    <br>
+    <div class="weekDays">
+        <div *ngFor="let day of days">
+            <mat-checkbox class="example-margin" [(ngModel)]="day.checked"> {{day.title}}</mat-checkbox>
+
+        </div>
+        <br>
+    </div>
+    <br>
+    <ngx-timepicker-field [controlOnly]="true" id="time" name="time" [(ngModel)]="time"></ngx-timepicker-field>
+
+    <div>
+
+        <section class="example-section">
+            <mat-slide-toggle class="example-margin" [color]="color" [(ngModel)]="myFlagForSlideToggle"
+                [checked]="checkedValue" [disabled]="disabled">
+                Enable
+            </mat-slide-toggle>
+        </section>
+    </div>
+
+    <mat-button-field>
+
+
+
+        <button mat-raised-button (click)="onCancel()">Cancel</button>
+
+        <button mat-raised-button (click)="onSave()">Save </button>
+        <br>
+    </mat-button-field>
+
+</div>

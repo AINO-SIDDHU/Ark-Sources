@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+
+    <span [routerLink]="['/graphstat']" class="title">eXtrapola.</span>
+
+    <a mat-button [routerLink]="['/publication-source-tab/publicationList']">Sources</a>
+    <a mat-button [routerLink]="['/']">Articles</a>
+
+
+    <span class="spacer">
+        <mat-icon class="icon">
+            <a aria-hidden="false" id="home" routerLink="/graphstat" aria-label="Example home  icon">home</a>
+        </mat-icon>
+
+        <mat-icon class="icon" aria-hidden="false" id="local" aria-label="Example local_offer icon"
+            [routerLink]="['/script']">local_offer
+        </mat-icon>
+        <mat-icon class="icon" aria-hidden="false" id="icon" aria-label="Example power_settings_new icon">
+            power_settings_new
+        </mat-icon>
+    </span>
+
+
+</mat-toolbar>
+
+<mat-toolbar class="footer">
+    <p>Ainosoft ©2017 All rights reserved</p>
+</mat-toolbar>
+<router-outlet></router-outlet>
